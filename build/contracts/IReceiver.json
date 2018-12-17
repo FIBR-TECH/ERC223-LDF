@@ -1,0 +1,338 @@
+{
+  "contractName": "IReceiver",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        },
+        {
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "tokenFallback",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\r\npragma solidity ^0.4.9;\r\n\r\n/**\r\n * @title IReceiver\r\n * @dev Interface for contract wanting to implement the ERC223 fallback\r\n * \r\n **/\r\n \r\ninterface IReceiver {\r\n    function tokenFallback(address _from, uint _value, bytes _data) external payable;\r\n}",
+  "sourcePath": "C:\\Users\\Lendflo\\Documents\\GitHub\\Lendflo-Commodo\\open-sourcing\\contracts\\IReceiver.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Lendflo/Documents/GitHub/Lendflo-Commodo/open-sourcing/contracts/IReceiver.sol",
+    "exportedSymbols": {
+      "IReceiver": [
+        915
+      ]
+    },
+    "id": 916,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 905,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title IReceiver\r\n@dev Interface for contract wanting to implement the ERC223 fallback\r\n\r*",
+        "fullyImplemented": false,
+        "id": 915,
+        "linearizedBaseContracts": [
+          915
+        ],
+        "name": "IReceiver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 914,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "tokenFallback",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "192:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 909,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "207:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 908,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "207:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 911,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "220:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 910,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:41:5"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 913,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:0:5"
+            },
+            "scope": 915,
+            "src": "169:81:5",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 916,
+        "src": "142:111:5"
+      }
+    ],
+    "src": "2:251:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Lendflo/Documents/GitHub/Lendflo-Commodo/open-sourcing/contracts/IReceiver.sol",
+    "exportedSymbols": {
+      "IReceiver": [
+        915
+      ]
+    },
+    "id": 916,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 905,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title IReceiver\r\n@dev Interface for contract wanting to implement the ERC223 fallback\r\n\r*",
+        "fullyImplemented": false,
+        "id": 915,
+        "linearizedBaseContracts": [
+          915
+        ],
+        "name": "IReceiver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 914,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "tokenFallback",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "192:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 909,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "207:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 908,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "207:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 911,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "220:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 910,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:41:5"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 913,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:0:5"
+            },
+            "scope": 915,
+            "src": "169:81:5",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 916,
+        "src": "142:111:5"
+      }
+    ],
+    "src": "2:251:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-12-13T12:38:23.751Z"
+}
