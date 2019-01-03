@@ -22,6 +22,56 @@ contract ERC223 is IERC223 {
     
     uint256 private _totalSupply;
 
+    struct Register{
+        address sender;
+        uint amount;
+    }
+
+    mapping(address => Register[]) public register;
+
+    /**
+    * @dev Function to add address of sender and the amount of transaction to recepient array of transactions.
+    * @param recepient address that received LDFTokens.
+    * @param sender address that sent LDFTokens.
+    * @param amount amount of LDFTokens.
+    * @return Address of sender of transaction to the recepient.
+    */  
+    function addToRegistry(address recepient, address sender, uint amount) public returns(uint){
+        register[recepient].push(Register(sender, amount));
+        return register[recepient].length;
+    }
+
+    /**
+    * @dev Function to return address of sender of transaction to recepient with particular index in an array.
+    * @param recepient address that received LDFTokens.
+    * @param index position of a particular sender of transaction to recepient in an array of senders.
+    * @return Address of sender of transaction to the recepient.
+    */  
+    function getSenderAddress(address recepient, uint index) public view returns(address){
+        return register[recepient][index].sender;
+    }
+
+    
+    /**
+    * @dev Function to return amount of LDFTokens of transaction to recepient with particular index in an array.
+    * @param recepient address that received LDFTokens.
+    * @param index position of a particular sender of transaction to recepient in an array of senders.
+    * @return Uint that represent the amount of LDFTokens particular transaction to recepient.
+    */  
+    function getSenderAmount(address recepient, uint index) public view returns(uint){
+        return register[recepient][index].amount;
+    }
+
+    /**
+    * @dev Function to get length of register of transactions to recepient.
+    * @param recepient address that received LDFTokens.
+    * @return A uint that represents the number of transaction that had recepient as a target of transfer.
+    */    
+    function getLength(address recepient) public view returns(uint){
+        return register[recepient].length;
+    }
+
+
     /**
     * @dev Function to access total supply of tokens 
     * @return A uint256 specifying the total amount of coins in circulation.
@@ -75,11 +125,15 @@ contract ERC223 is IERC223 {
     */
     function approve(address spender, uint256 value) public returns (bool) {
         require (spender != address(0), "[Approve Error] Spender account cannot be 0x address");
+        require (spender != msg.sender, "[Approve Error] Can't approve for spending more for yourself");
 
         _allowed[msg.sender][spender] = value;
+        
+        decreaseOwnAllowance(msg.sender, value);
         emit Approval(msg.sender, spender, value);
         return true;
     }
+
 
     /**
     * @dev Increase the amount of tokens that an owner allowed to a spender.
@@ -92,12 +146,57 @@ contract ERC223 is IERC223 {
     */
     function increaseAllowance(address spender, uint256 addedValue) public returns (bool){
         require (spender != address(0), "[Allowance Error] Spender account cannot be 0x address");
+        require (spender != msg.sender, "[Approve Error] Can't increase allowance for spending more for yourself");
 
         _allowed[msg.sender][spender] = (_allowed[msg.sender][spender].add(addedValue));
-
-        emit Approval(msg.sender, spender, _allowed[msg.sender][spender]);
+        
+        if(_allowed[msg.sender][msg.sender].sub(addedValue) < 0) {
+            approve(msg.sender, 0);
+        }
+        else {
+            decreaseOwnAllowance(msg.sender, addedValue);
+        }
+        
+       emit Approval(msg.sender, spender, _allowed[msg.sender][spender]);
         return true;
     }
+
+
+    /**
+    * @dev Increase the amount of tokens that an owner allowed to a spender.
+    * approve should be called when allowed_[_spender] == 0. To increment
+    * allowed value is better to use this function to avoid 2 calls (and wait until
+    * the first transaction is mined)
+    * From MonolithDAO Token.sol
+    * @param owner The address which will spend the funds.
+    * @param addedValue The amount of tokens to increase the allowance by.
+    */
+    function increaseOwnAllowance(address owner, uint256 addedValue) internal returns (bool){
+        require (owner != address(0), "[Allowance Error] owner account cannot be 0x address");
+
+        _allowed[owner][owner] = (_allowed[owner][owner].add(addedValue));
+   
+        emit Approval(owner, owner, _allowed[owner][owner]);
+        return true;
+    }
+
+    /**
+    * @dev Decrease the amount of tokens that an owner allowed to a spender.
+    * approve should be called when allowed_[spender] == 0. To decrement
+    * allowed value is better to use this function to avoid 2 calls (and wait until
+    * the first transaction is mined)
+    * From MonolithDAO Token.sol
+    * @param owner The address which will spend the funds.
+    * @param subtractedValue The amount of tokens to decrease the allowance by.
+    */
+    function decreaseOwnAllowance(address owner, uint256 subtractedValue) internal returns (bool){
+        _allowed[owner][owner] = (
+        _allowed[owner][owner].sub(subtractedValue));
+
+        emit Approval(owner, owner, _allowed[owner][owner]);
+        return true;
+    }
+
 
     /**
     * @dev Decrease the amount of tokens that an owner allowed to a spender.
@@ -128,9 +227,17 @@ contract ERC223 is IERC223 {
     function transfer(address to, uint value, bytes data, string custom_fallback) public returns (bool success) {
         if(_isContract(to)) {
             require (balanceOf(msg.sender) > value, "[Transfer Error] Balance must be greater then amount to be transfered");
+            require (allowance(msg.sender,msg.sender) > value, "[Allowance Error] Allowance of owner must be greater then amount to be transfered");
+            require (to != address(0), "[Transfer Error] _to cannot be 0x address");
+
             _balances[msg.sender] = balanceOf(msg.sender).sub(value);
             _balances[to] = balanceOf(to).add(value);
             assert(to.call.value(0)(bytes4(keccak256(abi.encodePacked(custom_fallback))), msg.sender, value, data));
+            
+            addToRegistry(to, msg.sender, value);   //My line to add transaction to registry
+            increaseOwnAllowance(to, value);   //My line to increase allowance for the recepient
+            decreaseOwnAllowance(msg.sender, value); //My line to decrease allowance for the sender of its own funds
+
             emit TransferData(msg.sender, to, value, data);
             return true;
         }
@@ -185,6 +292,9 @@ contract ERC223 is IERC223 {
 
         _totalSupply = _totalSupply.add(value);
         _balances[account] = _balances[account].add(value);
+        
+        increaseOwnAllowance(account, value);   //My line to increase allowance for the recepient
+
         emit Transfer(address(0), account, value);
     }
 
@@ -197,6 +307,8 @@ contract ERC223 is IERC223 {
     function _burn(address account, uint256 value) internal {
         _totalSupply = _totalSupply.sub(value);
         _balances[account] = _balances[account].sub(value);
+        decreaseOwnAllowance(account, value); //My line to decrease allowance for the sender of its own funds
+
         emit Transfer(account, address(0), value);
     }
 
@@ -244,6 +356,10 @@ contract ERC223 is IERC223 {
 
         _balances[_from] = balanceOf(_from).sub(_value);
         _balances[_to] = balanceOf(_to).add(_value);
+        addToRegistry(_to, _from, _value);
+
+        increaseOwnAllowance(_to, _value);  //My line to increase allowance for the recepient
+        decreaseOwnAllowance( _from, _value); //My line to decrease allowance for the sender of its own funds
 
         emit Transfer(_from, _to, _value);
         emit TransferData(_from, _to, _value, _data);
@@ -265,7 +381,11 @@ contract ERC223 is IERC223 {
         _balances[_from] = balanceOf(_from).sub(_value);
         _balances[_to] = balanceOf(_to).add(_value);
         IReceiver(_to).tokenFallback(_from, _value, _data);
-        
+        addToRegistry(_to, _from, _value);
+
+        increaseOwnAllowance(_to, _value);   //My line to increase allowance for the recepient
+        decreaseOwnAllowance(_from, _value); //My line to decrease allowance for the sender of its own funds
+
         emit Transfer(_from, _to, _value);
         emit TransferData(_from, _to, _value, _data);
         return true;

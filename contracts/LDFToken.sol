@@ -18,4 +18,5 @@ import "./ERC223Burnable.sol";
 contract LDFToken is ERC223, ERC223Detailed, ERC223Mintable, ERC223Burnable {
     constructor () public ERC223Detailed("Lendflo Digital Fiat", "LDF", 0) {
     }
+
 }
