@@ -34,14 +34,14 @@
     "absolutePath": "/home/ec2-user/Lendflo-LDF-ERC223/contracts/IReceiver.sol",
     "exportedSymbols": {
       "IReceiver": [
-        1214
+        958
       ]
     },
-    "id": 1215,
+    "id": 959,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1204,
+        "id": 948,
         "literals": [
           "solidity",
           "^",
@@ -57,9 +57,9 @@
         "contractKind": "interface",
         "documentation": "@title IReceiver\n@dev Interface for contract wanting to implement the ERC223 fallback\n\n *",
         "fullyImplemented": false,
-        "id": 1214,
+        "id": 958,
         "linearizedBaseContracts": [
-          1214
+          958
         ],
         "name": "IReceiver",
         "nodeType": "ContractDefinition",
@@ -67,7 +67,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1213,
+            "id": 957,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -75,15 +75,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1211,
+              "id": 955,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1206,
+                  "id": 950,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1213,
+                  "scope": 957,
                   "src": "182:13:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -92,7 +92,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1205,
+                    "id": 949,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "182:7:5",
@@ -106,10 +106,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1208,
+                  "id": 952,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1213,
+                  "scope": 957,
                   "src": "197:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -118,7 +118,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1207,
+                    "id": 951,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "197:4:5",
@@ -132,10 +132,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1210,
+                  "id": 954,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1213,
+                  "scope": 957,
                   "src": "210:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -144,7 +144,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1209,
+                    "id": 953,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "210:5:5",
@@ -161,19 +161,19 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 1212,
+              "id": 956,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "239:0:5"
             },
-            "scope": 1214,
+            "scope": 958,
             "src": "159:81:5",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1215,
+        "scope": 959,
         "src": "133:109:5"
       }
     ],
@@ -183,14 +183,14 @@
     "absolutePath": "/home/ec2-user/Lendflo-LDF-ERC223/contracts/IReceiver.sol",
     "exportedSymbols": {
       "IReceiver": [
-        1214
+        958
       ]
     },
-    "id": 1215,
+    "id": 959,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1204,
+        "id": 948,
         "literals": [
           "solidity",
           "^",
@@ -206,9 +206,9 @@
         "contractKind": "interface",
         "documentation": "@title IReceiver\n@dev Interface for contract wanting to implement the ERC223 fallback\n\n *",
         "fullyImplemented": false,
-        "id": 1214,
+        "id": 958,
         "linearizedBaseContracts": [
-          1214
+          958
         ],
         "name": "IReceiver",
         "nodeType": "ContractDefinition",
@@ -216,7 +216,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1213,
+            "id": 957,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -224,15 +224,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1211,
+              "id": 955,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1206,
+                  "id": 950,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1213,
+                  "scope": 957,
                   "src": "182:13:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -241,7 +241,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1205,
+                    "id": 949,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "182:7:5",
@@ -255,10 +255,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1208,
+                  "id": 952,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1213,
+                  "scope": 957,
                   "src": "197:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -267,7 +267,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1207,
+                    "id": 951,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "197:4:5",
@@ -281,10 +281,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1210,
+                  "id": 954,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1213,
+                  "scope": 957,
                   "src": "210:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -293,7 +293,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1209,
+                    "id": 953,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "210:5:5",
@@ -310,19 +310,19 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 1212,
+              "id": 956,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "239:0:5"
             },
-            "scope": 1214,
+            "scope": 958,
             "src": "159:81:5",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 1215,
+        "scope": 959,
         "src": "133:109:5"
       }
     ],
@@ -334,5 +334,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2019-01-03T17:25:33.657Z"
+  "updatedAt": "2019-01-04T13:11:42.612Z"
 }
