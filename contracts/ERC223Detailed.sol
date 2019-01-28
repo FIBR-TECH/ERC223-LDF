@@ -1,14 +1,12 @@
 pragma solidity ^0.4.24;
 
-import "./IERC223.sol";
-
 /**
  * @title ERC20Detailed token
  * @dev The decimals are only for visualization purposes.
  * All the operations are done using the smallest and indivisible token unit,
  * just as on Ethereum all the operations are done in wei.
  */
-contract ERC223Detailed is IERC223 {
+contract ERC223Detailed {
     string private _name;
     string private _symbol;
     uint8 private _decimals;

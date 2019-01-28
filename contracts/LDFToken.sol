@@ -1,7 +1,5 @@
 pragma solidity ^0.4.24;
 
-import "./ERC223.sol";
-import "./ERC223Detailed.sol";
 import "./ERC223Mintable.sol";
 import "./ERC223Burnable.sol";
 
@@ -15,8 +13,11 @@ import "./ERC223Burnable.sol";
  * Lendflo ERC223 implements light fallback function that is not pure
  * and therefore allows to execute other functions in the contract after the transfer of funds.
  */
-contract LDFToken is ERC223, ERC223Detailed, ERC223Mintable, ERC223Burnable {
-    constructor () public ERC223Detailed("Lendflo Digital Fiat", "LDF", 0) {
-    }
+contract LDFToken is ERC223Mintable, ERC223Burnable{
 
+  string public name = "Lendflo Digital Fiat";
+  string public symbol = "LDF";
+  uint8 public decimals = 0;
+
+  constructor() public {}
 }

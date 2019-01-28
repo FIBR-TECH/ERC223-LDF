@@ -1,11 +1,8 @@
+pragma solidity ^0.4.24;
 
-pragma solidity ^0.4.9;
-
-/**
- * @title IReceiver
- * @dev Interface for contract wanting to implement the ERC223 fallback
- * 
- **/
+ /*
+ * Contract that is working with ERC223 tokens
+ */
  
 interface IReceiver {
     function tokenFallback(address _from, uint _value, bytes _data) external payable;

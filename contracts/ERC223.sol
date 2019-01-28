@@ -4,6 +4,8 @@ pragma solidity ^0.4.24;
 import "./IReceiver.sol";
 import "./IERC223.sol";
 import "./SafeMath.sol";
+import "./IHolder.sol";
+import "./Ownable.sol";
 
 /**
  * @title ERC223 Token
@@ -15,7 +17,7 @@ import "./SafeMath.sol";
  * Lendflo ERC223 implements light fallback function that is not pure
  * and therefore allows to execute other functions in the contract after the transfer of funds.
  */
-contract ERC223 is IERC223 {
+contract ERC223 is Ownable{ //is IERC223 {
     using SafeMath for uint256;
     mapping (address => uint256) private _balances;
 
@@ -23,6 +25,24 @@ contract ERC223 is IERC223 {
     
     uint256 private _totalSupply;
 
+    event TransferData(address indexed from, address indexed to, uint value, bytes indexed data);
+    
+    enum LCTStatues { Locked, Withdrawable, Repayed}
+    LCTStatues status;
+
+
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 value
+    );
+    
+    event Transfer(
+        address indexed from,
+        address indexed to,
+        uint256 value
+    );
+    
     /**
     * @dev Function to access total supply of tokens 
     * @return A uint256 specifying the total amount of coins in circulation.
@@ -275,4 +295,26 @@ contract ERC223 is IERC223 {
         emit TransferData(_from, _to, _value, _data);
         return true;
     }
+    
+
+    event Test1(uint);
+    event Test2(address);
+    /**
+        @dev withdraw tokens from the contract only by owner and only in withdrawable state
+        @param _holder   contract that hold tokens
+        @param _amount  amount of tokens to withdraw
+    */
+    function withdraw(address _holder, uint256 _amount)
+        public
+    {
+        require (balanceOf(_holder) >= _amount, "[Transfer Error] Balance must be greater then amount to be transfered");
+        require (msg.sender == IHolder(_holder).owner(), "[Transfer Error] Balance must be greater then amount to be transfered");
+        uint statusnumber = IHolder(_holder).getStatus();
+        emit Test1(statusnumber);
+        require(statusnumber == uint(LCTStatues.Withdrawable), "contract is not withrdrawable");
+         _balances[msg.sender] = _balances[msg.sender].add(_amount); // deduct the amount from the account balance
+         _balances[_holder] = _balances[_holder].sub(_amount);
+    }
+    
+    
 }

@@ -1,0 +1,973 @@
+{
+  "contractName": "Test",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "SimpleEnum",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "setValues",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061011a806100206000396000f30060806040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632096525581146057578063e26d147414607b578063e43d0bf9146092575b600080fd5b348015606257600080fd5b50606960a4565b60408051918252519081900360200190f35b348015608657600080fd5b50609060043560ba565b005b348015609d57600080fd5b50609060e2565b6000805460ff16600281111560b557fe5b905090565b80600281111560c557fe5b6000805460ff1916600183600281111560da57fe5b021790555050565b6000805460ff191690555600a165627a7a72305820cd81c83c4fd7bbec30fc7ef38c87f36bfa6bf2dbe71f37655ecf841348faad060029",
+  "deployedBytecode": "0x60806040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632096525581146057578063e26d147414607b578063e43d0bf9146092575b600080fd5b348015606257600080fd5b50606960a4565b60408051918252519081900360200190f35b348015608657600080fd5b50609060043560ba565b005b348015609d57600080fd5b50609060e2565b6000805460ff16600281111560b557fe5b905090565b80600281111560c557fe5b6000805460ff1916600183600281111560da57fe5b021790555050565b6000805460ff191690555600a165627a7a72305820cd81c83c4fd7bbec30fc7ef38c87f36bfa6bf2dbe71f37655ecf841348faad060029",
+  "sourceMap": "30:371:18:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;30:371:18;;;;;;;",
+  "deployedSourceMap": "30:371:18:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;308:88;;8:9:-1;5:2;;;30:1;27;20:12;5:2;308:88:18;;;;;;;;;;;;;;;;;;;;215:85;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;215:85:18;;;;;;;133:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;133:74:18;;;;308:88;353:4;381:6;;;;376:12;;;;;;;;369:19;;308:88;:::o;215:85::-;285:6;274:18;;;;;;;;265:6;:27;;-1:-1:-1;;265:27:18;;;;;;;;;;;;;;;;215:85;:::o;133:74::-;182:17;173:26;;-1:-1:-1;;173:26:18;;;133:74::o",
+  "source": "pragma solidity ^0.4.24;\r\n\r\n\r\ncontract Test {\r\n\r\n    enum LCTStatues { Locked, Withdrawable, Repayed}\r\n    LCTStatues status;\r\n\r\n    function SimpleEnum() public {\r\n        status = LCTStatues.Locked;\r\n    }\r\n\r\n    function setValues(uint _value) public {\r\n        status = LCTStatues(_value);\r\n    }\r\n\r\n    function getValue() public constant returns (uint){\r\n        return uint(status);\r\n    }\r\n\r\n}",
+  "sourcePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Test.sol",
+  "ast": {
+    "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Test.sol",
+    "exportedSymbols": {
+      "Test": [
+        1901
+      ]
+    },
+    "id": 1902,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1863,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1901,
+        "linearizedBaseContracts": [
+          1901
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Test.LCTStatues",
+            "id": 1867,
+            "members": [
+              {
+                "id": 1864,
+                "name": "Locked",
+                "nodeType": "EnumValue",
+                "src": "71:6:18"
+              },
+              {
+                "id": 1865,
+                "name": "Withdrawable",
+                "nodeType": "EnumValue",
+                "src": "79:12:18"
+              },
+              {
+                "id": 1866,
+                "name": "Repayed",
+                "nodeType": "EnumValue",
+                "src": "93:7:18"
+              }
+            ],
+            "name": "LCTStatues",
+            "nodeType": "EnumDefinition",
+            "src": "53:48:18"
+          },
+          {
+            "constant": false,
+            "id": 1869,
+            "name": "status",
+            "nodeType": "VariableDeclaration",
+            "scope": 1901,
+            "src": "107:17:18",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_LCTStatues_$1867",
+              "typeString": "enum Test.LCTStatues"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1868,
+              "name": "LCTStatues",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1867,
+              "src": "107:10:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                "typeString": "enum Test.LCTStatues"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1877,
+              "nodeType": "Block",
+              "src": "162:45:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1875,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1872,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1869,
+                      "src": "173:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1873,
+                        "name": "LCTStatues",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1867,
+                        "src": "182:10:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeString": "type(enum Test.LCTStatues)"
+                        }
+                      },
+                      "id": 1874,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Locked",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "182:17:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "src": "173:26:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeString": "enum Test.LCTStatues"
+                    }
+                  },
+                  "id": 1876,
+                  "nodeType": "ExpressionStatement",
+                  "src": "173:26:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1878,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "SimpleEnum",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1870,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:2:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1871,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:0:18"
+            },
+            "scope": 1901,
+            "src": "133:74:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1889,
+              "nodeType": "Block",
+              "src": "254:46:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1887,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1883,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1869,
+                      "src": "265:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1885,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1880,
+                          "src": "285:6:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 1884,
+                        "name": "LCTStatues",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1867,
+                        "src": "274:10:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeString": "type(enum Test.LCTStatues)"
+                        }
+                      },
+                      "id": 1886,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "274:18:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "src": "265:27:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeString": "enum Test.LCTStatues"
+                    }
+                  },
+                  "id": 1888,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:27:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1890,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setValues",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1880,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1890,
+                  "src": "234:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1879,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:13:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:0:18"
+            },
+            "scope": 1901,
+            "src": "215:85:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1899,
+              "nodeType": "Block",
+              "src": "358:38:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1896,
+                        "name": "status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1869,
+                        "src": "381:6:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeString": "enum Test.LCTStatues"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeString": "enum Test.LCTStatues"
+                        }
+                      ],
+                      "id": 1895,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "376:4:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 1897,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "376:12:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1894,
+                  "id": 1898,
+                  "nodeType": "Return",
+                  "src": "369:19:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1900,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1891,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "325:2:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "353:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "352:6:18"
+            },
+            "scope": 1901,
+            "src": "308:88:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1902,
+        "src": "30:371:18"
+      }
+    ],
+    "src": "0:401:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Test.sol",
+    "exportedSymbols": {
+      "Test": [
+        1901
+      ]
+    },
+    "id": 1902,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1863,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1901,
+        "linearizedBaseContracts": [
+          1901
+        ],
+        "name": "Test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Test.LCTStatues",
+            "id": 1867,
+            "members": [
+              {
+                "id": 1864,
+                "name": "Locked",
+                "nodeType": "EnumValue",
+                "src": "71:6:18"
+              },
+              {
+                "id": 1865,
+                "name": "Withdrawable",
+                "nodeType": "EnumValue",
+                "src": "79:12:18"
+              },
+              {
+                "id": 1866,
+                "name": "Repayed",
+                "nodeType": "EnumValue",
+                "src": "93:7:18"
+              }
+            ],
+            "name": "LCTStatues",
+            "nodeType": "EnumDefinition",
+            "src": "53:48:18"
+          },
+          {
+            "constant": false,
+            "id": 1869,
+            "name": "status",
+            "nodeType": "VariableDeclaration",
+            "scope": 1901,
+            "src": "107:17:18",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_LCTStatues_$1867",
+              "typeString": "enum Test.LCTStatues"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1868,
+              "name": "LCTStatues",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1867,
+              "src": "107:10:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                "typeString": "enum Test.LCTStatues"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1877,
+              "nodeType": "Block",
+              "src": "162:45:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1875,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1872,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1869,
+                      "src": "173:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1873,
+                        "name": "LCTStatues",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1867,
+                        "src": "182:10:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeString": "type(enum Test.LCTStatues)"
+                        }
+                      },
+                      "id": 1874,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Locked",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "182:17:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "src": "173:26:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeString": "enum Test.LCTStatues"
+                    }
+                  },
+                  "id": 1876,
+                  "nodeType": "ExpressionStatement",
+                  "src": "173:26:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1878,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "SimpleEnum",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1870,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:2:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1871,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:0:18"
+            },
+            "scope": 1901,
+            "src": "133:74:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1889,
+              "nodeType": "Block",
+              "src": "254:46:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1887,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1883,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1869,
+                      "src": "265:6:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1885,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1880,
+                          "src": "285:6:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 1884,
+                        "name": "LCTStatues",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1867,
+                        "src": "274:10:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeString": "type(enum Test.LCTStatues)"
+                        }
+                      },
+                      "id": 1886,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "274:18:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeString": "enum Test.LCTStatues"
+                      }
+                    },
+                    "src": "265:27:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeString": "enum Test.LCTStatues"
+                    }
+                  },
+                  "id": 1888,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:27:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1890,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setValues",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1880,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1890,
+                  "src": "234:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1879,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:13:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "254:0:18"
+            },
+            "scope": 1901,
+            "src": "215:85:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1899,
+              "nodeType": "Block",
+              "src": "358:38:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1896,
+                        "name": "status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1869,
+                        "src": "381:6:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeString": "enum Test.LCTStatues"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeString": "enum Test.LCTStatues"
+                        }
+                      ],
+                      "id": 1895,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "376:4:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 1897,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "376:12:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1894,
+                  "id": 1898,
+                  "nodeType": "Return",
+                  "src": "369:19:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1900,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1891,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "325:2:18"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1900,
+                  "src": "353:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "352:6:18"
+            },
+            "scope": 1901,
+            "src": "308:88:18",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1902,
+        "src": "30:371:18"
+      }
+    ],
+    "src": "0:401:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Linux.g++"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-01-28T13:07:53.452Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
