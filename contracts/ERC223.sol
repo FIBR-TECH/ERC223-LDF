@@ -27,10 +27,6 @@ contract ERC223 is Ownable{ //is IERC223 {
 
     event TransferData(address indexed from, address indexed to, uint value, bytes indexed data);
     
-    enum LCTStatues { Locked, Withdrawable, Repayed}
-    LCTStatues status;
-
-
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -296,9 +292,6 @@ contract ERC223 is Ownable{ //is IERC223 {
         return true;
     }
     
-
-    event Test1(uint);
-    event Test2(address);
     /**
         @dev withdraw tokens from the contract only by owner and only in withdrawable state
         @param _holder   contract that hold tokens
@@ -309,9 +302,8 @@ contract ERC223 is Ownable{ //is IERC223 {
     {
         require (balanceOf(_holder) >= _amount, "[Transfer Error] Balance must be greater then amount to be transfered");
         require (msg.sender == IHolder(_holder).owner(), "[Transfer Error] Balance must be greater then amount to be transfered");
-        uint statusnumber = IHolder(_holder).getStatus();
-        emit Test1(statusnumber);
-        require(statusnumber == uint(LCTStatues.Withdrawable), "contract is not withrdrawable");
+        bool statusWithdrawable = IHolder(_holder).isWithdrawable();
+        require(statusWithdrawable == true, "contract is not withrdrawable");
          _balances[msg.sender] = _balances[msg.sender].add(_amount); // deduct the amount from the account balance
          _balances[_holder] = _balances[_holder].sub(_amount);
     }
