@@ -293,19 +293,18 @@ contract ERC223 is Ownable{ //is IERC223 {
     }
     
     /**
-        @dev withdraw tokens from the contract only by owner and only in withdrawable state
-        @param _holder   contract that hold tokens
-        @param _amount  amount of tokens to withdraw
+        @dev withdraw tokens from the contract. Function can only be called by a contract which holds the money.
+        @param _from  address that executed the contract
+        @param _value amount of tokens to withdraw
     */
-    function withdraw(address _holder, uint256 _amount)
+    function withdraw(address _from, uint256 _value)
         public
     {
-        require (balanceOf(_holder) >= _amount, "[Transfer Error] Balance must be greater then amount to be transfered");
-        require (msg.sender == IHolder(_holder).owner(), "[Transfer Error] Balance must be greater then amount to be transfered");
-        bool statusWithdrawable = IHolder(_holder).isWithdrawable();
-        require(statusWithdrawable == true, "contract is not withrdrawable");
-         _balances[msg.sender] = _balances[msg.sender].add(_amount); // deduct the amount from the account balance
-         _balances[_holder] = _balances[_holder].sub(_amount);
+        require (balanceOf(msg.sender) >= _value, "Balance must be greater then amount to be transfered");
+        require(IHolder(msg.sender).isWithdrawable() == true, "contract is not withrdrawable");
+         _balances[_from] = _balances[_from].add(_value); 
+         _balances[msg.sender] = _balances[msg.sender].sub(_value);
+        emit Transfer(msg.sender, _from, _value);
     }
     
     
