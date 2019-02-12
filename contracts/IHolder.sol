@@ -15,5 +15,11 @@ interface IHolder  {
      * Gets owner of Holder contract
      */ 
     function owner() public view returns (address);
+
+    /**
+     * Checks whether token is withdrawable
+     */
+    function isWithdrawable() external view returns(bool);
+    
     
 }

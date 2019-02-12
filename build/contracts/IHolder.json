@@ -28,26 +28,40 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isWithdrawable",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.24;\r\n\r\n/* New Holder contract interface */\r\n\r\ninterface IHolder  {\r\n\r\n\r\n    /**\r\n     * Gets status of the contract holding Tokens\r\n     */\r\n    function getStatus() external view returns(uint);\r\n   \r\n   \r\n     /**\r\n     * Gets owner of Holder contract\r\n     */ \r\n    function owner() public view returns (address);\r\n    \r\n}",
+  "source": "pragma solidity ^0.4.24;\r\n\r\n/* New Holder contract interface */\r\n\r\ninterface IHolder  {\r\n\r\n\r\n    /**\r\n     * Gets status of the contract holding Tokens\r\n     */\r\n    function getStatus() external view returns(uint);\r\n   \r\n   \r\n     /**\r\n     * Gets owner of Holder contract\r\n     */ \r\n    function owner() public view returns (address);\r\n\r\n    /**\r\n     * Checks whether token is withdrawable\r\n     */\r\n    function isWithdrawable() external view returns(bool);\r\n    \r\n    \r\n}",
   "sourcePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/IHolder.sol",
   "ast": {
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/IHolder.sol",
     "exportedSymbols": {
       "IHolder": [
-        1405
+        1367
       ]
     },
-    "id": 1406,
+    "id": 1368,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1394,
+        "id": 1351,
         "literals": [
           "solidity",
           "^",
@@ -63,9 +77,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1405,
+        "id": 1367,
         "linearizedBaseContracts": [
-          1405
+          1367
         ],
         "name": "IHolder",
         "nodeType": "ContractDefinition",
@@ -73,7 +87,7 @@
           {
             "body": null,
             "documentation": "Gets status of the contract holding Tokens\r",
-            "id": 1399,
+            "id": 1356,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -81,22 +95,22 @@
             "name": "getStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1395,
+              "id": 1352,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "184:2:9"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1398,
+              "id": 1355,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1397,
+                  "id": 1354,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1399,
+                  "scope": 1356,
                   "src": "209:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -105,7 +119,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1396,
+                    "id": 1353,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "209:4:9",
@@ -120,7 +134,7 @@
               ],
               "src": "208:6:9"
             },
-            "scope": 1405,
+            "scope": 1367,
             "src": "166:49:9",
             "stateMutability": "view",
             "superFunction": null,
@@ -129,7 +143,7 @@
           {
             "body": null,
             "documentation": "Gets owner of Holder contract\r",
-            "id": 1404,
+            "id": 1361,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -137,22 +151,22 @@
             "name": "owner",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1400,
+              "id": 1357,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "303:2:9"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1403,
+              "id": 1360,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1402,
+                  "id": 1359,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1404,
+                  "scope": 1361,
                   "src": "327:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -161,7 +175,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1401,
+                    "id": 1358,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "327:7:9",
@@ -176,31 +190,87 @@
               ],
               "src": "326:9:9"
             },
-            "scope": 1405,
+            "scope": 1367,
             "src": "289:47:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "Checks whether token is withdrawable\r",
+            "id": 1366,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isWithdrawable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "430:2:9"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1365,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1364,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1366,
+                  "src": "455:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1363,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "455:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "454:6:9"
+            },
+            "scope": 1367,
+            "src": "407:54:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
           }
         ],
-        "scope": 1406,
-        "src": "67:278:9"
+        "scope": 1368,
+        "src": "67:409:9"
       }
     ],
-    "src": "0:345:9"
+    "src": "0:476:9"
   },
   "legacyAST": {
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/IHolder.sol",
     "exportedSymbols": {
       "IHolder": [
-        1405
+        1367
       ]
     },
-    "id": 1406,
+    "id": 1368,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1394,
+        "id": 1351,
         "literals": [
           "solidity",
           "^",
@@ -216,9 +286,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1405,
+        "id": 1367,
         "linearizedBaseContracts": [
-          1405
+          1367
         ],
         "name": "IHolder",
         "nodeType": "ContractDefinition",
@@ -226,7 +296,7 @@
           {
             "body": null,
             "documentation": "Gets status of the contract holding Tokens\r",
-            "id": 1399,
+            "id": 1356,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -234,22 +304,22 @@
             "name": "getStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1395,
+              "id": 1352,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "184:2:9"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1398,
+              "id": 1355,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1397,
+                  "id": 1354,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1399,
+                  "scope": 1356,
                   "src": "209:4:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -258,7 +328,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1396,
+                    "id": 1353,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "209:4:9",
@@ -273,7 +343,7 @@
               ],
               "src": "208:6:9"
             },
-            "scope": 1405,
+            "scope": 1367,
             "src": "166:49:9",
             "stateMutability": "view",
             "superFunction": null,
@@ -282,7 +352,7 @@
           {
             "body": null,
             "documentation": "Gets owner of Holder contract\r",
-            "id": 1404,
+            "id": 1361,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -290,22 +360,22 @@
             "name": "owner",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1400,
+              "id": 1357,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "303:2:9"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1403,
+              "id": 1360,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1402,
+                  "id": 1359,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1404,
+                  "scope": 1361,
                   "src": "327:7:9",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -314,7 +384,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1401,
+                    "id": 1358,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "327:7:9",
@@ -329,18 +399,74 @@
               ],
               "src": "326:9:9"
             },
-            "scope": 1405,
+            "scope": 1367,
             "src": "289:47:9",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "Checks whether token is withdrawable\r",
+            "id": 1366,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "isWithdrawable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1362,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "430:2:9"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1365,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1364,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1366,
+                  "src": "455:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1363,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "455:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "454:6:9"
+            },
+            "scope": 1367,
+            "src": "407:54:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
           }
         ],
-        "scope": 1406,
-        "src": "67:278:9"
+        "scope": 1368,
+        "src": "67:409:9"
       }
     ],
-    "src": "0:345:9"
+    "src": "0:476:9"
   },
   "compiler": {
     "name": "solc",
@@ -348,7 +474,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T15:36:07.739Z",
+  "updatedAt": "2019-02-12T17:53:42.209Z",
   "devdoc": {
     "methods": {}
   },
@@ -356,6 +482,9 @@
     "methods": {
       "getStatus()": {
         "notice": "Gets status of the contract holding Tokens\r"
+      },
+      "isWithdrawable()": {
+        "notice": "Checks whether token is withdrawable\r"
       },
       "owner()": {
         "notice": "Gets owner of Holder contract\r"

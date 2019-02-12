@@ -56,14 +56,14 @@
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/ExampleReceiver.sol",
     "exportedSymbols": {
       "Crowdfunding": [
-        1132
+        1182
       ]
     },
-    "id": 1133,
+    "id": 1183,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1104,
+        "id": 1154,
         "literals": [
           "solidity",
           "^",
@@ -76,10 +76,10 @@
       {
         "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/IReceiver.sol",
         "file": "./IReceiver.sol",
-        "id": 1105,
+        "id": 1155,
         "nodeType": "ImportDirective",
-        "scope": 1133,
-        "sourceUnit": 1320,
+        "scope": 1183,
+        "sourceUnit": 1380,
         "src": "26:25:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -90,31 +90,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1106,
+              "id": 1156,
               "name": "IReceiver",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1319,
+              "referencedDeclaration": 1379,
               "src": "82:9:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IReceiver_$1319",
+                "typeIdentifier": "t_contract$_IReceiver_$1379",
                 "typeString": "contract IReceiver"
               }
             },
-            "id": 1107,
+            "id": 1157,
             "nodeType": "InheritanceSpecifier",
             "src": "82:9:6"
           }
         ],
         "contractDependencies": [
-          1319
+          1379
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1132,
+        "id": 1182,
         "linearizedBaseContracts": [
-          1132,
-          1319
+          1182,
+          1379
         ],
         "name": "Crowdfunding",
         "nodeType": "ContractDefinition",
@@ -122,20 +122,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1115,
+            "id": 1165,
             "name": "tokensReceived",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1114,
+              "id": 1164,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1109,
+                  "id": 1159,
                   "indexed": false,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1115,
+                  "scope": 1165,
                   "src": "124:7:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -144,7 +144,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1108,
+                    "id": 1158,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "124:7:6",
@@ -158,11 +158,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1111,
+                  "id": 1161,
                   "indexed": false,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1115,
+                  "scope": 1165,
                   "src": "133:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -171,7 +171,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1110,
+                    "id": 1160,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "133:4:6",
@@ -185,11 +185,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1163,
                   "indexed": false,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1115,
+                  "scope": 1165,
                   "src": "139:5:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -198,7 +198,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1162,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "139:5:6",
@@ -217,7 +217,7 @@
           },
           {
             "body": {
-              "id": 1130,
+              "id": 1180,
               "nodeType": "Block",
               "src": "577:58:6",
               "statements": [
@@ -227,11 +227,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1125,
+                        "id": 1175,
                         "name": "_from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1117,
+                        "referencedDeclaration": 1167,
                         "src": "607:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -240,11 +240,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1126,
+                        "id": 1176,
                         "name": "_value",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1119,
+                        "referencedDeclaration": 1169,
                         "src": "614:6:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -253,11 +253,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1127,
+                        "id": 1177,
                         "name": "_data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1121,
+                        "referencedDeclaration": 1171,
                         "src": "622:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_calldata_ptr",
@@ -280,18 +280,18 @@
                           "typeString": "bytes calldata"
                         }
                       ],
-                      "id": 1124,
+                      "id": 1174,
                       "name": "tokensReceived",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1115,
+                      "referencedDeclaration": 1165,
                       "src": "592:14:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,uint256,bytes memory)"
                       }
                     },
-                    "id": 1128,
+                    "id": 1178,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -305,14 +305,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1129,
+                  "id": 1179,
                   "nodeType": "EmitStatement",
                   "src": "587:41:6"
                 }
               ]
             },
             "documentation": "@dev called on tokenFallback, registers the investment, and mints the LCT to the investor if the amount invested does not cause the loan to be over funded\n@param _value the amount of token received by the contract\n@param _from the address of the investor\n@param _data extra data send with transaction",
-            "id": 1131,
+            "id": 1181,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -320,15 +320,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1122,
+              "id": 1172,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1117,
+                  "id": 1167,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1131,
+                  "scope": 1181,
                   "src": "520:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -337,7 +337,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1116,
+                    "id": 1166,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "520:7:6",
@@ -351,10 +351,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1119,
+                  "id": 1169,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1131,
+                  "scope": 1181,
                   "src": "535:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -363,7 +363,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1118,
+                    "id": 1168,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "535:4:6",
@@ -377,10 +377,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1121,
+                  "id": 1171,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1131,
+                  "scope": 1181,
                   "src": "548:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -389,7 +389,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1120,
+                    "id": 1170,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "548:5:6",
@@ -406,19 +406,19 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 1123,
+              "id": 1173,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "577:0:6"
             },
-            "scope": 1132,
+            "scope": 1182,
             "src": "497:138:6",
             "stateMutability": "payable",
-            "superFunction": 1318,
+            "superFunction": 1378,
             "visibility": "external"
           }
         ],
-        "scope": 1133,
+        "scope": 1183,
         "src": "57:580:6"
       }
     ],
@@ -428,14 +428,14 @@
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/ExampleReceiver.sol",
     "exportedSymbols": {
       "Crowdfunding": [
-        1132
+        1182
       ]
     },
-    "id": 1133,
+    "id": 1183,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1104,
+        "id": 1154,
         "literals": [
           "solidity",
           "^",
@@ -448,10 +448,10 @@
       {
         "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/IReceiver.sol",
         "file": "./IReceiver.sol",
-        "id": 1105,
+        "id": 1155,
         "nodeType": "ImportDirective",
-        "scope": 1133,
-        "sourceUnit": 1320,
+        "scope": 1183,
+        "sourceUnit": 1380,
         "src": "26:25:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -462,31 +462,31 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1106,
+              "id": 1156,
               "name": "IReceiver",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1319,
+              "referencedDeclaration": 1379,
               "src": "82:9:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IReceiver_$1319",
+                "typeIdentifier": "t_contract$_IReceiver_$1379",
                 "typeString": "contract IReceiver"
               }
             },
-            "id": 1107,
+            "id": 1157,
             "nodeType": "InheritanceSpecifier",
             "src": "82:9:6"
           }
         ],
         "contractDependencies": [
-          1319
+          1379
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1132,
+        "id": 1182,
         "linearizedBaseContracts": [
-          1132,
-          1319
+          1182,
+          1379
         ],
         "name": "Crowdfunding",
         "nodeType": "ContractDefinition",
@@ -494,20 +494,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1115,
+            "id": 1165,
             "name": "tokensReceived",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1114,
+              "id": 1164,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1109,
+                  "id": 1159,
                   "indexed": false,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1115,
+                  "scope": 1165,
                   "src": "124:7:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -516,7 +516,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1108,
+                    "id": 1158,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "124:7:6",
@@ -530,11 +530,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1111,
+                  "id": 1161,
                   "indexed": false,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1115,
+                  "scope": 1165,
                   "src": "133:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -543,7 +543,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1110,
+                    "id": 1160,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "133:4:6",
@@ -557,11 +557,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1163,
                   "indexed": false,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1115,
+                  "scope": 1165,
                   "src": "139:5:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -570,7 +570,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1162,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "139:5:6",
@@ -589,7 +589,7 @@
           },
           {
             "body": {
-              "id": 1130,
+              "id": 1180,
               "nodeType": "Block",
               "src": "577:58:6",
               "statements": [
@@ -599,11 +599,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1125,
+                        "id": 1175,
                         "name": "_from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1117,
+                        "referencedDeclaration": 1167,
                         "src": "607:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -612,11 +612,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1126,
+                        "id": 1176,
                         "name": "_value",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1119,
+                        "referencedDeclaration": 1169,
                         "src": "614:6:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -625,11 +625,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1127,
+                        "id": 1177,
                         "name": "_data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1121,
+                        "referencedDeclaration": 1171,
                         "src": "622:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_calldata_ptr",
@@ -652,18 +652,18 @@
                           "typeString": "bytes calldata"
                         }
                       ],
-                      "id": 1124,
+                      "id": 1174,
                       "name": "tokensReceived",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1115,
+                      "referencedDeclaration": 1165,
                       "src": "592:14:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,uint256,bytes memory)"
                       }
                     },
-                    "id": 1128,
+                    "id": 1178,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -677,14 +677,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1129,
+                  "id": 1179,
                   "nodeType": "EmitStatement",
                   "src": "587:41:6"
                 }
               ]
             },
             "documentation": "@dev called on tokenFallback, registers the investment, and mints the LCT to the investor if the amount invested does not cause the loan to be over funded\n@param _value the amount of token received by the contract\n@param _from the address of the investor\n@param _data extra data send with transaction",
-            "id": 1131,
+            "id": 1181,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -692,15 +692,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1122,
+              "id": 1172,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1117,
+                  "id": 1167,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1131,
+                  "scope": 1181,
                   "src": "520:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -709,7 +709,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1116,
+                    "id": 1166,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "520:7:6",
@@ -723,10 +723,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1119,
+                  "id": 1169,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1131,
+                  "scope": 1181,
                   "src": "535:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -735,7 +735,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1118,
+                    "id": 1168,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "535:4:6",
@@ -749,10 +749,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1121,
+                  "id": 1171,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1131,
+                  "scope": 1181,
                   "src": "548:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -761,7 +761,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1120,
+                    "id": 1170,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "548:5:6",
@@ -778,19 +778,19 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 1123,
+              "id": 1173,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "577:0:6"
             },
-            "scope": 1132,
+            "scope": 1182,
             "src": "497:138:6",
             "stateMutability": "payable",
-            "superFunction": 1318,
+            "superFunction": 1378,
             "visibility": "external"
           }
         ],
-        "scope": 1133,
+        "scope": 1183,
         "src": "57:580:6"
       }
     ],
@@ -802,7 +802,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T13:07:53.447Z",
+  "updatedAt": "2019-02-12T17:53:42.206Z",
   "devdoc": {
     "methods": {
       "tokenFallback(address,uint256,bytes)": {

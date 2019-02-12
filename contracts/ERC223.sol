@@ -17,7 +17,7 @@ import "./Ownable.sol";
  * Lendflo ERC223 implements light fallback function that is not pure
  * and therefore allows to execute other functions in the contract after the transfer of funds.
  */
-contract ERC223 is Ownable{ //is IERC223 {
+contract ERC223 is Ownable{
     using SafeMath for uint256;
     mapping (address => uint256) private _balances;
 
@@ -201,7 +201,7 @@ contract ERC223 is Ownable{ //is IERC223 {
     * @param account The account that will receive the created tokens.
     * @param value The amount that will be created.
     */
-    function _mint(address account, uint256 value) internal {
+    function _mint(address account, uint256 value) internal onlyOwner {
         require (account != address(0), "[Mint Error] Recipient of tokens cannot be address 0");
 
         _totalSupply = _totalSupply.add(value);
@@ -228,11 +228,9 @@ contract ERC223 is Ownable{ //is IERC223 {
     * @param account The account whose tokens will be burnt.
     * @param value The amount that will be burnt.
     */
-    function _burnFrom(address account, uint256 value) internal {
+    function _burnFrom(address account, uint256 value) internal onlyOwner{
         // Should https://github.com/OpenZeppelin/zeppelin-solidity/issues/707 be accepted,
         // this function needs to emit an event with the updated approval.
-        _allowed[account][msg.sender] = _allowed[account][msg.sender].sub(
-        value);
         _burn(account, value);
         emit Approval(account, msg.sender, _allowed[account][msg.sender]);
     }

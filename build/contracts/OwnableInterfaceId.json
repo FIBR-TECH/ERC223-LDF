@@ -26,14 +26,14 @@
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/OwnableInterfaceId.sol",
     "exportedSymbols": {
       "OwnableInterfaceId": [
-        1639
+        1699
       ]
     },
-    "id": 1640,
+    "id": 1700,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1612,
+        "id": 1672,
         "literals": [
           "solidity",
           "^",
@@ -46,10 +46,10 @@
       {
         "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Ownable.sol",
         "file": "./Ownable.sol",
-        "id": 1613,
+        "id": 1673,
         "nodeType": "ImportDirective",
-        "scope": 1640,
-        "sourceUnit": 1611,
+        "scope": 1700,
+        "sourceUnit": 1671,
         "src": "26:23:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -60,16 +60,16 @@
         "contractKind": "contract",
         "documentation": "@title Ownable interface id calculator.\n@dev See the EIP165 specification for more information:\nhttps://github.com/ethereum/EIPs/blob/master/EIPS/eip-165.md#specification",
         "fullyImplemented": true,
-        "id": 1639,
+        "id": 1699,
         "linearizedBaseContracts": [
-          1639
+          1699
         ],
         "name": "OwnableInterfaceId",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1637,
+              "id": 1697,
               "nodeType": "Block",
               "src": "328:142:15",
               "statements": [
@@ -78,26 +78,26 @@
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1619,
+                      "id": 1679,
                       "name": "i",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1638,
+                      "scope": 1698,
                       "src": "338:9:15",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Ownable_$1610",
+                        "typeIdentifier": "t_contract$_Ownable_$1670",
                         "typeString": "contract Ownable"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1618,
+                        "id": 1678,
                         "name": "Ownable",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1610,
+                        "referencedDeclaration": 1670,
                         "src": "338:7:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Ownable_$1610",
+                          "typeIdentifier": "t_contract$_Ownable_$1670",
                           "typeString": "contract Ownable"
                         }
                       },
@@ -105,7 +105,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1620,
+                  "id": 1680,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "338:9:15"
@@ -117,7 +117,7 @@
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
                     },
-                    "id": 1635,
+                    "id": 1695,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -128,7 +128,7 @@
                         "typeIdentifier": "t_bytes4",
                         "typeString": "bytes4"
                       },
-                      "id": 1631,
+                      "id": 1691,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -139,7 +139,7 @@
                           "typeIdentifier": "t_bytes4",
                           "typeString": "bytes4"
                         },
-                        "id": 1627,
+                        "id": 1687,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -150,32 +150,32 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1621,
+                              "id": 1681,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1619,
+                              "referencedDeclaration": 1679,
                               "src": "364:1:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Ownable_$1610",
+                                "typeIdentifier": "t_contract$_Ownable_$1670",
                                 "typeString": "contract Ownable"
                               }
                             },
-                            "id": 1622,
+                            "id": 1682,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "owner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1535,
+                            "referencedDeclaration": 1595,
                             "src": "364:7:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
                               "typeString": "function () view external returns (address)"
                             }
                           },
-                          "id": 1623,
+                          "id": 1683,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -197,32 +197,32 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1624,
+                              "id": 1684,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1619,
+                              "referencedDeclaration": 1679,
                               "src": "383:1:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Ownable_$1610",
+                                "typeIdentifier": "t_contract$_Ownable_$1670",
                                 "typeString": "contract Ownable"
                               }
                             },
-                            "id": 1625,
+                            "id": 1685,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "isOwner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1555,
+                            "referencedDeclaration": 1615,
                             "src": "383:9:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
                               "typeString": "function () view external returns (bool)"
                             }
                           },
-                          "id": 1626,
+                          "id": 1686,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -250,32 +250,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1628,
+                            "id": 1688,
                             "name": "i",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1619,
+                            "referencedDeclaration": 1679,
                             "src": "404:1:15",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Ownable_$1610",
+                              "typeIdentifier": "t_contract$_Ownable_$1670",
                               "typeString": "contract Ownable"
                             }
                           },
-                          "id": 1629,
+                          "id": 1689,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "renounceOwnership",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1574,
+                          "referencedDeclaration": 1634,
                           "src": "404:19:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                             "typeString": "function () external"
                           }
                         },
-                        "id": 1630,
+                        "id": 1690,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -303,32 +303,32 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1632,
+                          "id": 1692,
                           "name": "i",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1619,
+                          "referencedDeclaration": 1679,
                           "src": "435:1:15",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_Ownable_$1610",
+                            "typeIdentifier": "t_contract$_Ownable_$1670",
                             "typeString": "contract Ownable"
                           }
                         },
-                        "id": 1633,
+                        "id": 1693,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "transferOwnership",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1586,
+                        "referencedDeclaration": 1646,
                         "src": "435:19:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                           "typeString": "function (address) external"
                         }
                       },
-                      "id": 1634,
+                      "id": 1694,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -348,15 +348,15 @@
                       "typeString": "bytes4"
                     }
                   },
-                  "functionReturnParameters": 1617,
-                  "id": 1636,
+                  "functionReturnParameters": 1677,
+                  "id": 1696,
                   "nodeType": "Return",
                   "src": "357:106:15"
                 }
               ]
             },
             "documentation": null,
-            "id": 1638,
+            "id": 1698,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -364,22 +364,22 @@
             "name": "getInterfaceId",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1614,
+              "id": 1674,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "296:2:15"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1617,
+              "id": 1677,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1616,
+                  "id": 1676,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1638,
+                  "scope": 1698,
                   "src": "320:6:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -388,7 +388,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 1615,
+                    "id": 1675,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "320:6:15",
@@ -403,14 +403,14 @@
               ],
               "src": "319:8:15"
             },
-            "scope": 1639,
+            "scope": 1699,
             "src": "273:197:15",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1640,
+        "scope": 1700,
         "src": "239:233:15"
       }
     ],
@@ -420,14 +420,14 @@
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/OwnableInterfaceId.sol",
     "exportedSymbols": {
       "OwnableInterfaceId": [
-        1639
+        1699
       ]
     },
-    "id": 1640,
+    "id": 1700,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1612,
+        "id": 1672,
         "literals": [
           "solidity",
           "^",
@@ -440,10 +440,10 @@
       {
         "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Ownable.sol",
         "file": "./Ownable.sol",
-        "id": 1613,
+        "id": 1673,
         "nodeType": "ImportDirective",
-        "scope": 1640,
-        "sourceUnit": 1611,
+        "scope": 1700,
+        "sourceUnit": 1671,
         "src": "26:23:15",
         "symbolAliases": [],
         "unitAlias": ""
@@ -454,16 +454,16 @@
         "contractKind": "contract",
         "documentation": "@title Ownable interface id calculator.\n@dev See the EIP165 specification for more information:\nhttps://github.com/ethereum/EIPs/blob/master/EIPS/eip-165.md#specification",
         "fullyImplemented": true,
-        "id": 1639,
+        "id": 1699,
         "linearizedBaseContracts": [
-          1639
+          1699
         ],
         "name": "OwnableInterfaceId",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1637,
+              "id": 1697,
               "nodeType": "Block",
               "src": "328:142:15",
               "statements": [
@@ -472,26 +472,26 @@
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1619,
+                      "id": 1679,
                       "name": "i",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1638,
+                      "scope": 1698,
                       "src": "338:9:15",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Ownable_$1610",
+                        "typeIdentifier": "t_contract$_Ownable_$1670",
                         "typeString": "contract Ownable"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1618,
+                        "id": 1678,
                         "name": "Ownable",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1610,
+                        "referencedDeclaration": 1670,
                         "src": "338:7:15",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Ownable_$1610",
+                          "typeIdentifier": "t_contract$_Ownable_$1670",
                           "typeString": "contract Ownable"
                         }
                       },
@@ -499,7 +499,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1620,
+                  "id": 1680,
                   "initialValue": null,
                   "nodeType": "VariableDeclarationStatement",
                   "src": "338:9:15"
@@ -511,7 +511,7 @@
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
                     },
-                    "id": 1635,
+                    "id": 1695,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -522,7 +522,7 @@
                         "typeIdentifier": "t_bytes4",
                         "typeString": "bytes4"
                       },
-                      "id": 1631,
+                      "id": 1691,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -533,7 +533,7 @@
                           "typeIdentifier": "t_bytes4",
                           "typeString": "bytes4"
                         },
-                        "id": 1627,
+                        "id": 1687,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -544,32 +544,32 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1621,
+                              "id": 1681,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1619,
+                              "referencedDeclaration": 1679,
                               "src": "364:1:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Ownable_$1610",
+                                "typeIdentifier": "t_contract$_Ownable_$1670",
                                 "typeString": "contract Ownable"
                               }
                             },
-                            "id": 1622,
+                            "id": 1682,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "owner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1535,
+                            "referencedDeclaration": 1595,
                             "src": "364:7:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
                               "typeString": "function () view external returns (address)"
                             }
                           },
-                          "id": 1623,
+                          "id": 1683,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -591,32 +591,32 @@
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 1624,
+                              "id": 1684,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1619,
+                              "referencedDeclaration": 1679,
                               "src": "383:1:15",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Ownable_$1610",
+                                "typeIdentifier": "t_contract$_Ownable_$1670",
                                 "typeString": "contract Ownable"
                               }
                             },
-                            "id": 1625,
+                            "id": 1685,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "isOwner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1555,
+                            "referencedDeclaration": 1615,
                             "src": "383:9:15",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
                               "typeString": "function () view external returns (bool)"
                             }
                           },
-                          "id": 1626,
+                          "id": 1686,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -644,32 +644,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1628,
+                            "id": 1688,
                             "name": "i",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1619,
+                            "referencedDeclaration": 1679,
                             "src": "404:1:15",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Ownable_$1610",
+                              "typeIdentifier": "t_contract$_Ownable_$1670",
                               "typeString": "contract Ownable"
                             }
                           },
-                          "id": 1629,
+                          "id": 1689,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "renounceOwnership",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 1574,
+                          "referencedDeclaration": 1634,
                           "src": "404:19:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                             "typeString": "function () external"
                           }
                         },
-                        "id": 1630,
+                        "id": 1690,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -697,32 +697,32 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1632,
+                          "id": 1692,
                           "name": "i",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1619,
+                          "referencedDeclaration": 1679,
                           "src": "435:1:15",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_Ownable_$1610",
+                            "typeIdentifier": "t_contract$_Ownable_$1670",
                             "typeString": "contract Ownable"
                           }
                         },
-                        "id": 1633,
+                        "id": 1693,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "transferOwnership",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 1586,
+                        "referencedDeclaration": 1646,
                         "src": "435:19:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                           "typeString": "function (address) external"
                         }
                       },
-                      "id": 1634,
+                      "id": 1694,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -742,15 +742,15 @@
                       "typeString": "bytes4"
                     }
                   },
-                  "functionReturnParameters": 1617,
-                  "id": 1636,
+                  "functionReturnParameters": 1677,
+                  "id": 1696,
                   "nodeType": "Return",
                   "src": "357:106:15"
                 }
               ]
             },
             "documentation": null,
-            "id": 1638,
+            "id": 1698,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -758,22 +758,22 @@
             "name": "getInterfaceId",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1614,
+              "id": 1674,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "296:2:15"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1617,
+              "id": 1677,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1616,
+                  "id": 1676,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1638,
+                  "scope": 1698,
                   "src": "320:6:15",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -782,7 +782,7 @@
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 1615,
+                    "id": 1675,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
                     "src": "320:6:15",
@@ -797,14 +797,14 @@
               ],
               "src": "319:8:15"
             },
-            "scope": 1639,
+            "scope": 1699,
             "src": "273:197:15",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1640,
+        "scope": 1700,
         "src": "239:233:15"
       }
     ],
@@ -816,7 +816,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T13:07:53.450Z",
+  "updatedAt": "2019-02-12T17:53:42.214Z",
   "devdoc": {
     "methods": {},
     "title": "Ownable interface id calculator."

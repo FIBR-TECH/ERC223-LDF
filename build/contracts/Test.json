@@ -49,14 +49,14 @@
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Test.sol",
     "exportedSymbols": {
       "Test": [
-        1901
+        1961
       ]
     },
-    "id": 1902,
+    "id": 1962,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1863,
+        "id": 1923,
         "literals": [
           "solidity",
           "^",
@@ -72,31 +72,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1901,
+        "id": 1961,
         "linearizedBaseContracts": [
-          1901
+          1961
         ],
         "name": "Test",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Test.LCTStatues",
-            "id": 1867,
+            "id": 1927,
             "members": [
               {
-                "id": 1864,
+                "id": 1924,
                 "name": "Locked",
                 "nodeType": "EnumValue",
                 "src": "71:6:18"
               },
               {
-                "id": 1865,
+                "id": 1925,
                 "name": "Withdrawable",
                 "nodeType": "EnumValue",
                 "src": "79:12:18"
               },
               {
-                "id": 1866,
+                "id": 1926,
                 "name": "Repayed",
                 "nodeType": "EnumValue",
                 "src": "93:7:18"
@@ -108,26 +108,26 @@
           },
           {
             "constant": false,
-            "id": 1869,
+            "id": 1929,
             "name": "status",
             "nodeType": "VariableDeclaration",
-            "scope": 1901,
+            "scope": 1961,
             "src": "107:17:18",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_LCTStatues_$1867",
+              "typeIdentifier": "t_enum$_LCTStatues_$1927",
               "typeString": "enum Test.LCTStatues"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1868,
+              "id": 1928,
               "name": "LCTStatues",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1867,
+              "referencedDeclaration": 1927,
               "src": "107:10:18",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                "typeIdentifier": "t_enum$_LCTStatues_$1927",
                 "typeString": "enum Test.LCTStatues"
               }
             },
@@ -136,28 +136,28 @@
           },
           {
             "body": {
-              "id": 1877,
+              "id": 1937,
               "nodeType": "Block",
               "src": "162:45:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1875,
+                    "id": 1935,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1872,
+                      "id": 1932,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1869,
+                      "referencedDeclaration": 1929,
                       "src": "173:6:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
@@ -167,18 +167,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1873,
+                        "id": 1933,
                         "name": "LCTStatues",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1867,
+                        "referencedDeclaration": 1927,
                         "src": "182:10:18",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1927_$",
                           "typeString": "type(enum Test.LCTStatues)"
                         }
                       },
-                      "id": 1874,
+                      "id": 1934,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -188,24 +188,24 @@
                       "referencedDeclaration": null,
                       "src": "182:17:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
                     "src": "173:26:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeIdentifier": "t_enum$_LCTStatues_$1927",
                       "typeString": "enum Test.LCTStatues"
                     }
                   },
-                  "id": 1876,
+                  "id": 1936,
                   "nodeType": "ExpressionStatement",
                   "src": "173:26:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 1878,
+            "id": 1938,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -213,19 +213,19 @@
             "name": "SimpleEnum",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1870,
+              "id": 1930,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "152:2:18"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1871,
+              "id": 1931,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "162:0:18"
             },
-            "scope": 1901,
+            "scope": 1961,
             "src": "133:74:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -233,28 +233,28 @@
           },
           {
             "body": {
-              "id": 1889,
+              "id": 1949,
               "nodeType": "Block",
               "src": "254:46:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1887,
+                    "id": 1947,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1883,
+                      "id": 1943,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1869,
+                      "referencedDeclaration": 1929,
                       "src": "265:6:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
@@ -265,11 +265,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1885,
+                          "id": 1945,
                           "name": "_value",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1880,
+                          "referencedDeclaration": 1940,
                           "src": "285:6:18",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -284,18 +284,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 1884,
+                        "id": 1944,
                         "name": "LCTStatues",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1867,
+                        "referencedDeclaration": 1927,
                         "src": "274:10:18",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1927_$",
                           "typeString": "type(enum Test.LCTStatues)"
                         }
                       },
-                      "id": 1886,
+                      "id": 1946,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -305,24 +305,24 @@
                       "nodeType": "FunctionCall",
                       "src": "274:18:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
                     "src": "265:27:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeIdentifier": "t_enum$_LCTStatues_$1927",
                       "typeString": "enum Test.LCTStatues"
                     }
                   },
-                  "id": 1888,
+                  "id": 1948,
                   "nodeType": "ExpressionStatement",
                   "src": "265:27:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 1890,
+            "id": 1950,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -330,15 +330,15 @@
             "name": "setValues",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1881,
+              "id": 1941,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1880,
+                  "id": 1940,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1890,
+                  "scope": 1950,
                   "src": "234:11:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -347,7 +347,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1879,
+                    "id": 1939,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "234:4:18",
@@ -364,12 +364,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1882,
+              "id": 1942,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "254:0:18"
             },
-            "scope": 1901,
+            "scope": 1961,
             "src": "215:85:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -377,7 +377,7 @@
           },
           {
             "body": {
-              "id": 1899,
+              "id": 1959,
               "nodeType": "Block",
               "src": "358:38:18",
               "statements": [
@@ -387,14 +387,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1896,
+                        "id": 1956,
                         "name": "status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1869,
+                        "referencedDeclaration": 1929,
                         "src": "381:6:18",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeIdentifier": "t_enum$_LCTStatues_$1927",
                           "typeString": "enum Test.LCTStatues"
                         }
                       }
@@ -402,11 +402,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeIdentifier": "t_enum$_LCTStatues_$1927",
                           "typeString": "enum Test.LCTStatues"
                         }
                       ],
-                      "id": 1895,
+                      "id": 1955,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -419,7 +419,7 @@
                       },
                       "typeName": "uint"
                     },
-                    "id": 1897,
+                    "id": 1957,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -433,15 +433,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1894,
-                  "id": 1898,
+                  "functionReturnParameters": 1954,
+                  "id": 1958,
                   "nodeType": "Return",
                   "src": "369:19:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 1900,
+            "id": 1960,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -449,22 +449,22 @@
             "name": "getValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1891,
+              "id": 1951,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "325:2:18"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1894,
+              "id": 1954,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1893,
+                  "id": 1953,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1900,
+                  "scope": 1960,
                   "src": "353:4:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -473,7 +473,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1892,
+                    "id": 1952,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "353:4:18",
@@ -488,14 +488,14 @@
               ],
               "src": "352:6:18"
             },
-            "scope": 1901,
+            "scope": 1961,
             "src": "308:88:18",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1902,
+        "scope": 1962,
         "src": "30:371:18"
       }
     ],
@@ -505,14 +505,14 @@
     "absolutePath": "/home/ubuntu/Lendflo-LDF-ERC223/contracts/Test.sol",
     "exportedSymbols": {
       "Test": [
-        1901
+        1961
       ]
     },
-    "id": 1902,
+    "id": 1962,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1863,
+        "id": 1923,
         "literals": [
           "solidity",
           "^",
@@ -528,31 +528,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1901,
+        "id": 1961,
         "linearizedBaseContracts": [
-          1901
+          1961
         ],
         "name": "Test",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Test.LCTStatues",
-            "id": 1867,
+            "id": 1927,
             "members": [
               {
-                "id": 1864,
+                "id": 1924,
                 "name": "Locked",
                 "nodeType": "EnumValue",
                 "src": "71:6:18"
               },
               {
-                "id": 1865,
+                "id": 1925,
                 "name": "Withdrawable",
                 "nodeType": "EnumValue",
                 "src": "79:12:18"
               },
               {
-                "id": 1866,
+                "id": 1926,
                 "name": "Repayed",
                 "nodeType": "EnumValue",
                 "src": "93:7:18"
@@ -564,26 +564,26 @@
           },
           {
             "constant": false,
-            "id": 1869,
+            "id": 1929,
             "name": "status",
             "nodeType": "VariableDeclaration",
-            "scope": 1901,
+            "scope": 1961,
             "src": "107:17:18",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_LCTStatues_$1867",
+              "typeIdentifier": "t_enum$_LCTStatues_$1927",
               "typeString": "enum Test.LCTStatues"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1868,
+              "id": 1928,
               "name": "LCTStatues",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1867,
+              "referencedDeclaration": 1927,
               "src": "107:10:18",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                "typeIdentifier": "t_enum$_LCTStatues_$1927",
                 "typeString": "enum Test.LCTStatues"
               }
             },
@@ -592,28 +592,28 @@
           },
           {
             "body": {
-              "id": 1877,
+              "id": 1937,
               "nodeType": "Block",
               "src": "162:45:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1875,
+                    "id": 1935,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1872,
+                      "id": 1932,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1869,
+                      "referencedDeclaration": 1929,
                       "src": "173:6:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
@@ -623,18 +623,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1873,
+                        "id": 1933,
                         "name": "LCTStatues",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1867,
+                        "referencedDeclaration": 1927,
                         "src": "182:10:18",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1927_$",
                           "typeString": "type(enum Test.LCTStatues)"
                         }
                       },
-                      "id": 1874,
+                      "id": 1934,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -644,24 +644,24 @@
                       "referencedDeclaration": null,
                       "src": "182:17:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
                     "src": "173:26:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeIdentifier": "t_enum$_LCTStatues_$1927",
                       "typeString": "enum Test.LCTStatues"
                     }
                   },
-                  "id": 1876,
+                  "id": 1936,
                   "nodeType": "ExpressionStatement",
                   "src": "173:26:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 1878,
+            "id": 1938,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -669,19 +669,19 @@
             "name": "SimpleEnum",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1870,
+              "id": 1930,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "152:2:18"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1871,
+              "id": 1931,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "162:0:18"
             },
-            "scope": 1901,
+            "scope": 1961,
             "src": "133:74:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -689,28 +689,28 @@
           },
           {
             "body": {
-              "id": 1889,
+              "id": 1949,
               "nodeType": "Block",
               "src": "254:46:18",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1887,
+                    "id": 1947,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1883,
+                      "id": 1943,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1869,
+                      "referencedDeclaration": 1929,
                       "src": "265:6:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
@@ -721,11 +721,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 1885,
+                          "id": 1945,
                           "name": "_value",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1880,
+                          "referencedDeclaration": 1940,
                           "src": "285:6:18",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -740,18 +740,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 1884,
+                        "id": 1944,
                         "name": "LCTStatues",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1867,
+                        "referencedDeclaration": 1927,
                         "src": "274:10:18",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1867_$",
+                          "typeIdentifier": "t_type$_t_enum$_LCTStatues_$1927_$",
                           "typeString": "type(enum Test.LCTStatues)"
                         }
                       },
-                      "id": 1886,
+                      "id": 1946,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -761,24 +761,24 @@
                       "nodeType": "FunctionCall",
                       "src": "274:18:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                        "typeIdentifier": "t_enum$_LCTStatues_$1927",
                         "typeString": "enum Test.LCTStatues"
                       }
                     },
                     "src": "265:27:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                      "typeIdentifier": "t_enum$_LCTStatues_$1927",
                       "typeString": "enum Test.LCTStatues"
                     }
                   },
-                  "id": 1888,
+                  "id": 1948,
                   "nodeType": "ExpressionStatement",
                   "src": "265:27:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 1890,
+            "id": 1950,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -786,15 +786,15 @@
             "name": "setValues",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1881,
+              "id": 1941,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1880,
+                  "id": 1940,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1890,
+                  "scope": 1950,
                   "src": "234:11:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -803,7 +803,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1879,
+                    "id": 1939,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "234:4:18",
@@ -820,12 +820,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1882,
+              "id": 1942,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "254:0:18"
             },
-            "scope": 1901,
+            "scope": 1961,
             "src": "215:85:18",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -833,7 +833,7 @@
           },
           {
             "body": {
-              "id": 1899,
+              "id": 1959,
               "nodeType": "Block",
               "src": "358:38:18",
               "statements": [
@@ -843,14 +843,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1896,
+                        "id": 1956,
                         "name": "status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1869,
+                        "referencedDeclaration": 1929,
                         "src": "381:6:18",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeIdentifier": "t_enum$_LCTStatues_$1927",
                           "typeString": "enum Test.LCTStatues"
                         }
                       }
@@ -858,11 +858,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_enum$_LCTStatues_$1867",
+                          "typeIdentifier": "t_enum$_LCTStatues_$1927",
                           "typeString": "enum Test.LCTStatues"
                         }
                       ],
-                      "id": 1895,
+                      "id": 1955,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -875,7 +875,7 @@
                       },
                       "typeName": "uint"
                     },
-                    "id": 1897,
+                    "id": 1957,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -889,15 +889,15 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1894,
-                  "id": 1898,
+                  "functionReturnParameters": 1954,
+                  "id": 1958,
                   "nodeType": "Return",
                   "src": "369:19:18"
                 }
               ]
             },
             "documentation": null,
-            "id": 1900,
+            "id": 1960,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -905,22 +905,22 @@
             "name": "getValue",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1891,
+              "id": 1951,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "325:2:18"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1894,
+              "id": 1954,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1893,
+                  "id": 1953,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1900,
+                  "scope": 1960,
                   "src": "353:4:18",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -929,7 +929,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1892,
+                    "id": 1952,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "353:4:18",
@@ -944,14 +944,14 @@
               ],
               "src": "352:6:18"
             },
-            "scope": 1901,
+            "scope": 1961,
             "src": "308:88:18",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1902,
+        "scope": 1962,
         "src": "30:371:18"
       }
     ],
@@ -963,7 +963,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-28T13:07:53.452Z",
+  "updatedAt": "2019-02-12T17:53:42.218Z",
   "devdoc": {
     "methods": {}
   },
