@@ -6,7 +6,7 @@ import "./ERC223.sol";
  * @title Burnable Token
  * @dev Token that can be irreversibly burned (destroyed).
  */
-contract ERC223Burnable is ERC223 {
+contract ERC223Burnable is ERC223, MinterRole {
     /**
      * @dev Burns a specific amount of tokens.
      * @param value The amount of token to be burned.
@@ -20,7 +20,7 @@ contract ERC223Burnable is ERC223 {
      * @param from address The address which you want to send tokens from
      * @param value uint256 The amount of token to be burned
      */
-    function burnFrom(address from, uint256 value) public {
+    function burnFrom(address from, uint256 value) public onlyMinter {
         _burnFrom(from, value);
     }
 }

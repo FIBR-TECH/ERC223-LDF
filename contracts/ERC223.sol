@@ -148,7 +148,7 @@ contract ERC223 is Ownable{
     */
     function transfer(address to, uint value, bytes data, string custom_fallback) public returns (bool success) {
         if(_isContract(to)) {
-            require (balanceOf(msg.sender) > value, "[Transfer Error] Balance must be greater then amount to be transfered");
+            require (balanceOf(msg.sender) >= value, "[Transfer Error] Balance must be greater then amount to be transfered");
             _balances[msg.sender] = balanceOf(msg.sender).sub(value);
             _balances[to] = balanceOf(to).add(value);
             assert(to.call.value(0)(bytes4(keccak256(abi.encodePacked(custom_fallback))), msg.sender, value, data));
@@ -201,7 +201,7 @@ contract ERC223 is Ownable{
     * @param account The account that will receive the created tokens.
     * @param value The amount that will be created.
     */
-    function _mint(address account, uint256 value) internal onlyOwner {
+    function _mint(address account, uint256 value) internal {
         require (account != address(0), "[Mint Error] Recipient of tokens cannot be address 0");
 
         _totalSupply = _totalSupply.add(value);
@@ -228,7 +228,7 @@ contract ERC223 is Ownable{
     * @param account The account whose tokens will be burnt.
     * @param value The amount that will be burnt.
     */
-    function _burnFrom(address account, uint256 value) internal onlyOwner{
+    function _burnFrom(address account, uint256 value) internal {
         // Should https://github.com/OpenZeppelin/zeppelin-solidity/issues/707 be accepted,
         // this function needs to emit an event with the updated approval.
         _burn(account, value);
@@ -258,7 +258,7 @@ contract ERC223 is Ownable{
     * @return A bool defining if the transfer was succesful.
     */
     function _transferToAddress(address _from, address _to, uint _value, bytes _data) private returns (bool success) {
-        require (balanceOf(_from) > _value, "[Transfer Error] Balance must be greater then amount to be transfered");
+        require (balanceOf(_from) >= _value, "[Transfer Error] Balance must be greater then amount to be transfered");
         require (_to != address(0), "[Transfer Error] _to cannot be 0x address");
 
         _balances[_from] = balanceOf(_from).sub(_value);
@@ -278,7 +278,7 @@ contract ERC223 is Ownable{
     * @return A bool defining if the transfer was succesful.
     */
     function _transferToContract(address _from, address _to, uint _value, bytes _data) private returns (bool success) {
-        require (balanceOf(_from) > _value, "[Transfer Error] Balance must be greater then amount to be transfered");
+        require (balanceOf(_from) >= _value, "[Transfer Error] Balance must be greater then amount to be transfered");
         require (_to != address(0), "[Transfer Error] _to cannot be 0x address");
 
         _balances[_from] = balanceOf(_from).sub(_value);
@@ -300,8 +300,8 @@ contract ERC223 is Ownable{
     {
         require (balanceOf(msg.sender) >= _value, "Balance must be greater then amount to be transfered");
         require(IHolder(msg.sender).isWithdrawable() == true, "contract is not withrdrawable");
-         _balances[_from] = _balances[_from].add(_value); 
-         _balances[msg.sender] = _balances[msg.sender].sub(_value);
+        _balances[_from] = _balances[_from].add(_value); 
+        _balances[msg.sender] = _balances[msg.sender].sub(_value);
         emit Transfer(msg.sender, _from, _value);
     }
     
